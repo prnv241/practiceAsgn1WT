@@ -4,6 +4,7 @@ function handleSubmit(event) {
   var branch = document.getElementById("branch");
   var batch = document.getElementById("batch");
   var sequence = document.getElementById("sequence");
+  var pspace = document.getElementById("prn");
 
   var PRN = "";
   PRN = PRN + year.value.slice(2, 4);
@@ -26,5 +27,5 @@ function handleSubmit(event) {
     default:
       PRN = PRN + sequence.value;
   }
-  console.log(PRN);
+  pspace.innerHTML = PRN;
 }
